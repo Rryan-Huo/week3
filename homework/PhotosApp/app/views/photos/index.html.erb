@@ -13,9 +13,11 @@
   <tr>
     <td><%= photo.title %></td>
     <td><%= photo.url %></td>
-    <td><%= link_to 'Show', photo %></td>
-    <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
-    <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Show', photo_url(photo.id) %></td>
+    <td><%= link_to 'Delete', photo_url(photo.id),:method => "delete",
+                :confirm => "Are you sure?" %></td>
+    <td><%= link_to 'Edit', edit_photo_url(photo.id) %></td>
+   
   </tr>
 <% end %>
 </table>
@@ -23,3 +25,9 @@
 <br />
 
 <%= link_to 'New Photo', new_photo_path %>
+<br></br>
+<%= link_to 'Find a Photo', find_photo_url %>
+<br></br>
+<%= link_to 'List photos with same name', name_url %>
+<br></br>
+<%= link_to 'Delete photos with same name', "/photos/delete" %>

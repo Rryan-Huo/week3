@@ -1,5 +1,20 @@
 <h1>New photo</h1>
 
-<%= render 'form' %>
+<br></br>
+<%= form_tag "/photos" do %>
+  <p>
+    <%= label_tag 'title' %>
+    <%= text_field_tag 'title' %>
+  </p>
+  <br></br>
+  <p>
+    <%= label_tag 'url' %>
+    <%= text_field_tag 'url' %>
+  </p>
+ <br></br>
+  <%= submit_tag %>
+<% end %>
+<br></br>
+
 
 <%= link_to 'Back', photos_path %>

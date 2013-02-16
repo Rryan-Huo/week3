@@ -1,6 +1,18 @@
 <h1>Editing photo</h1>
 
-<%= render 'form' %>
 
-<%= link_to 'Show', @photo %> |
+<br></br>
+<%= form_tag  do %>
+  
+  <p>
+    <%= label_tag 'new title' %>
+    <%= text_field_tag 'new_title' %>
+  </p>
+  <br></br>
+ 
+  <%= submit_tag %>
+<% end %>
+<br></br>
+
+
 <%= link_to 'Back', photos_path %>

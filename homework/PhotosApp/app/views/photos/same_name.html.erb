@@ -1,0 +1,21 @@
+<h1>Listing photos with same name</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Url</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @photos.each do |photo| %>
+  <tr>
+    <td><%= photo.title %></td>
+    <td><%= photo.url %></td>
+    
+
+   
+  </tr>
+<% end %>
+</table>
